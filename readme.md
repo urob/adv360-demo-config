@@ -2,12 +2,12 @@
 
 This is a variation of the [official ZMK
 configuration](https://github.com/KinesisCorporation/Adv360-Pro-ZMK) for the Advantage
-360 pro. It is intended to be a good starting point for more complex private
-configurations.
+360 pro. It is intended to be a starting point for further customization.
 
-To build upon this configuration, simply fork this repo to your Github Account. The
-firmware will then be automatically (re-)build by Github whenever you make changes to
-the configuration, and can be downloaded from the Github Actions tab.
+To build upon this configuration, simply fork [this
+repo](https://github.com/urob/adv360-demo-config) to your Github Account. The firmware
+will then be automatically (re-)build by Github whenever you make changes to the
+configuration, and can be downloaded from the Github Actions tab.
 
 The main differences of this repo compared to the official Kinesis configuration are as
 follows:
@@ -17,7 +17,7 @@ follows:
 The firmware in this repo is configured to be compiled using my [adv360
 branch](https://github.com/urob/zmk/tree/adv360) of the ZMK firmware. Compared to the
 branch used by the official Kinesis repo, it features the following enhancements:
-- uses latest ZMK firmware
+- ZMK updated to latest ZMK firmware
 - includes board files and optional alternate matrix-transform (see below)
 - supports experimental mouse usage (PR #778)
 - supports tri-state (aka swapper) behavior (PR #1366)
@@ -53,7 +53,7 @@ See the
 [keymap file](https://github.com/urob/adv360-demo-config/blob/main/config/adv360pro.keymap)
 for configuration examples.
 
-## Streamlined build routine
+## Standard ZMK build routine
 
 I have replaced the custom make script used by Kinesis with a more standard ZMK build
 routine. In other words, this configuration now behaves exactly like any other ZMK
@@ -68,6 +68,8 @@ status indicators. I will upload an alternative branch with LED support soon.
 
 ## Cleaned up user config
 
-Finally, I have implemented a few tweaks to the keymap. Moreover, in an attempt to
-declutter the user repo, I have also moved the board definition files to the ZMK branch.
+Finally, I have implemented a few tweaks to the keymap.
+
+Moreover, in an attempt to declutter the user repo, I have also moved the board
+definition files to the ZMK branch.
 
