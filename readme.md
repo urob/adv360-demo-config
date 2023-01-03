@@ -2,7 +2,8 @@
 
 This is a variation of the [official ZMK
 configuration](https://github.com/KinesisCorporation/Adv360-Pro-ZMK) for the Advantage
-360 pro. It is intended to be a starting point for further customization.
+360 pro. It contains a few tweaks that I find useful and may provide a good starting
+point for further customization.
 
 To build upon this configuration, simply fork [this
 repo](https://github.com/urob/adv360-demo-config) to your Github Account. The firmware
@@ -18,7 +19,9 @@ The firmware in this repo is configured to be compiled using my [adv360
 branch](https://github.com/urob/zmk/tree/adv360) of the ZMK firmware. Compared to the
 branch used by the official Kinesis repo, it features the following enhancements:
 - ZMK updated to latest ZMK firmware
-- includes board files and optional alternate matrix-transform (see below)
+- includes board files from [PR #1454](https://github.com/zmkfirmware/zmk/pull/1454),
+  replacing the local definitions in the official Kinesis repo
+- adds optional alternate matrix-transform (see below)
 - supports experimental mouse usage (PR #778)
 - supports tri-state (aka swapper) behavior (PR #1366)
 - supports global-quick-tap-ms configuration for hold-taps and combos (PR #1387)
@@ -27,14 +30,15 @@ branch used by the official Kinesis repo, it features the following enhancements
 
 ## Alternate matrix-transform
 
-The board definition in the official repo includes several "dead" keys, which require
-placing several `&none` into the layout. This repo uses an alternate matrix transform
-that eliminates all unused keys, making the layout easier to read. 
+The board definition in the official repo includes a few keys reserved for the optional
+Kinesis foot pedal. For users without the pedal, this requires adding several
+placeholder keys in the layout. 
 
-In addition, it also moves the thumb cluster below the rest of the layout to further
-simplify the configuration. 
+To streamline the layout configuration, this repo provides an optional alternate matrix
+transform that eliminates all unused keys. The alternate transform also moves the thumb
+cluster to the bottom of the layout, which I have found easier to read.
 
-Specifically, the revised layout looks as follows:
+Specifically, the alternate layout looks as follows:
 ```
  ╭────────────────────────────┬────────────────────────────╮
  │  0   1   2   3   4   5   6 │  7   8   9  10  11  12  13 │
@@ -49,9 +53,17 @@ Specifically, the revised layout looks as follows:
                          ╰────┴────╯
 ```
 
-See the
-[keymap file](https://github.com/urob/adv360-demo-config/blob/main/config/adv360pro.keymap)
-for configuration examples.
+To use the alternate layout, add the following lines to the keymap file. See the [keymap
+file](https://github.com/urob/adv360-demo-config/blob/main/config/adv360pro.keymap) for
+a complete configuration example.
+
+```
+\ {
+    chosen {
+        zmk,matrix_transform = &urobs_transform;
+    };
+};
+```
 
 ## Standard ZMK build routine
 
@@ -73,10 +85,12 @@ patched with experimental code developed by Kinesis. Note that this code is high
 customized and is *not* compatible with most other ZMK keyboards. It is therefore
 unlikely that the ZMK community will be able to help troubleshooting.
 
-## Cleaned up user config
+It is also possible to switch LED support on and off by switching between `adv360`  and
+`adv360-led` on line 10 of
+[config/west.yml](https://github.com/urob/adv360-demo-config/blob/main/config/west.yml).
 
-Finally, I have implemented a few tweaks to the keymap.
+## User config
 
-Moreover, in an attempt to declutter the user repo, I have also moved the board
-definition files to the ZMK branch.
+Finally, I have moved the board definition files from the user repo to the ZMK branch,
+and added a few tweaks to the keymap.
 
