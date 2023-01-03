@@ -63,8 +63,15 @@ wonderful [ZMK community](https://discord.gg/XnBTxwHmfT).
 
 ## LED status indicators
 
-In order to increase compatibility with standard ZMK, I dropped support of the LED
-status indicators. I will upload an alternative branch with LED support soon.
+LED status indicators are currently not officially supported by ZMK. To increase
+compatibility with standard ZMK, I therefore dropped support for the LED status
+indicators from the main branch of this repo.
+
+The [led branch](https://github.com/urob/adv360-demo-config/tree/led) of this repo
+includes experimental LED support by building against a version of ZMK that has been
+patched with experimental code developed by Kinesis. Note that this code is highly
+customized and is *not* compatible with most other ZMK keyboards. It is therefore
+unlikely that the ZMK community will be able to help troubleshooting.
 
 ## Cleaned up user config
 
