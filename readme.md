@@ -92,5 +92,6 @@ It is also possible to switch LED support on and off by switching between `adv36
 ## User config
 
 Finally, I have moved the board definition files from the user repo to the ZMK branch,
-and added a few tweaks to the keymap.
+and added a few tweaks to the keymap. I also added a "mouse" layer to provide an example
+for how to configure mouse movements and mouse keys.
 
