@@ -23,7 +23,7 @@
             bindings = <
                 &kp MINUS &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog 1         &mo 3     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp EQUAL
                 &kp TAB   &kp SQT   &kp COMMA &kp DOT   &kp P     &kp Y     &tog 4         &none     &kp F     &kp G     &kp C     &kp R     &kp L     &kp FSLH
-                &kp ESC   &kp A     &kp O     &kp E     &kp U     &kp I     &none          &none     &kp D     &kp H     &kp T     &kp N     &kp S     &kp BSLH
+                &kp ESC   &kp A     &kp O     &kp E     &kp U     &kp I     &tog 5         &none     &kp D     &kp H     &kp T     &kp N     &kp S     &kp BSLH
                 &kp LSHFT &kp SEMI  &kp Q     &kp J     &kp K     &kp X                              &kp B     &kp M     &kp W     &kp V     &kp Z     &kp RSHFT
                 &mo 2     &kp GRAVE &kp CAPS  &kp LEFT  &kp RIGHT                                              &kp DOWN  &kp UP    &kp LBKT  &kp RBKT  &mo 2
                                                                   &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
@@ -68,6 +68,19 @@
                                                                               &bt BT_CLR   &bt BT_CLR       &bt BT_CLR  &bt BT_CLR
                                                                  ___          &bl BL_TOG   ___              ___         &bl BL_TOG   ___
                                                                                            ___              ___
+            >;
+        };
+        
+        qwerty {
+            bindings = <
+                &kp MINUS &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog 1         &mo 3     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp EQUAL
+                &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &tog 4         &none     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
+                &kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G     &tog 5         &none     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
+                &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
+                &mo 2     &kp GRAVE &kp CAPS  &kp LEFT  &kp RIGHT                                              &kp DOWN  &kp UP    &kp LBKT  &kp RBKT  &mo 2
+                                                                  &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
+                                                        &kp BSPC  &kp DEL   &kp HOME       &kp PG_UP &kp ENTER &kp SPACE
+                                                                            &kp END        &kp PG_DN
             >;
         };
 
