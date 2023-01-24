@@ -26,7 +26,7 @@
                 &kp ESC   &kp A     &kp O     &kp E     &kp U     &kp I     &tog 5         &none     &kp D     &kp H     &kp T     &kp N     &kp S     &kp BSLH
                 &kp LSHFT &kp SEMI  &kp Q     &kp J     &kp K     &kp X                              &kp B     &kp M     &kp W     &kp V     &kp Z     &kp RSHFT
                 &mo 2     &kp GRAVE &kp CAPS  &kp LEFT  &kp RIGHT                                              &kp DOWN  &kp UP    &kp LBKT  &kp RBKT  &mo 2
-                                                                  &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
+                                                                  &kp LGUI  &kp LALT       &kp RGUI  &kp RCTRL
                                                         &kp BSPC  &kp DEL   &kp HOME       &kp PG_UP &kp ENTER &kp SPACE
                                                                             &kp END        &kp PG_DN
             >;
@@ -78,7 +78,7 @@
                 &kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G     &tog 5         &none     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
                 &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
                 &mo 2     &kp GRAVE &kp CAPS  &kp LEFT  &kp RIGHT                                              &kp DOWN  &kp UP    &kp LBKT  &kp RBKT  &mo 2
-                                                                  &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
+                                                                  &kp LGUI  &kp LALT       &kp RGUI  &kp RCTRL
                                                         &kp BSPC  &kp DEL   &kp HOME       &kp PG_UP &kp ENTER &kp SPACE
                                                                             &kp END        &kp PG_DN
             >;
