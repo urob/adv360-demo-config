@@ -79,7 +79,7 @@
                 ___       ___          ___          ___          ___          ___          &bootloader      &bootloader ___          ___              ___          ___          ___          ___
                 ___       ___          ___          ___          ___          ___          ___              ___         ___          ___              ___          ___          ___          ___
                 ___       ___          ___          ___          ___          ___                                       ___          ___              ___          ___          ___          ___
-                ___       ___          ___          &bl BL_INC   &bl BL_DEC                                                          &bl BL_INC       &bl BL_DEC   ___          ___          ___
+                ___       ___          ___          &bl BL_INC   &bl BL_DEC                                                          &bl BL_DEC       &bl BL_INC   ___          ___          ___
                                                                               &bt BT_CLR   &bt BT_CLR       &bt BT_CLR  &bt BT_CLR
                                                                  ___          &bl BL_TOG   ___              ___         &bl BL_TOG   ___
                                                                                            ___              ___
