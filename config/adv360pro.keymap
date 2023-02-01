@@ -10,6 +10,13 @@
 
 #define ___ &trans
 
+#define QWERTY 0
+#define COLEMAK 1
+#define KEYPAD 2
+#define FN 3
+#define MOD 4
+#define MS 5
+
 / {
     /* remove unused keys from layout and move thumb cluster to bottom */
     chosen {
@@ -21,14 +28,27 @@
 
         base_layer {
             bindings = <
-                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog 1         &mo 3     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &tog 4         &none     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-                &kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G     &none          &none     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
+                &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog KEYPAD    &mo MOD   &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
+                &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &to QWERTY     &tog MS   &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
+                &kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G     &to COLEMAK    &none     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
                 &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-                &mo 2     &kp GRAVE &kp CAPS  &kp LEFT  &kp RIGHT                                              &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &mo 2
+                &mo FN    &kp GRAVE &kp CAPS  &kp LEFT  &kp RIGHT                                              &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &mo FN
                                                                   &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
                                                         &kp BSPC  &kp DEL   &kp HOME       &kp PG_UP &kp ENTER &kp SPACE
                                                                             &kp END        &kp PG_DN
+            >;
+        };
+
+        colemak_layer {
+            bindings = <
+                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
+                ___       &kp Q     &kp W     &kp F     &kp P     &kp B     ___            ___       &kp J     &kp L     &kp U     &kp Y     &kp SQT   &kp BSLH
+                ___       &kp A     &kp R     &kp S     &kp T     &kp G     ___            ___       &kp M     &kp N     &kp E     &kp I     &kp O     &kp FSLH
+                ___       &kp Z     &kp X     &kp C     &kp D     &kp V                              &kp K     &kp H     &kp COMMA &kp DOT   &kp SEMI  ___
+                ___       ___       ___       ___       ___                                                    ___       ___       ___       ___       ___
+                                                                  ___       ___            ___       ___
+                                                        ___       ___       ___            ___       ___       ___
+                                                                            ___            ___
             >;
         };
 
