@@ -10,6 +10,9 @@
 
 #define ___ &trans
 
+#define HYPER LS(LC(LA(LGUI)))
+#define MEH LS(LC(LALT))
+
 / {
     /* remove unused keys from layout and move thumb cluster to bottom */
     chosen {
@@ -22,13 +25,13 @@
         base_layer {
             bindings = <
                 &kp EQUAL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &tog 1         &mo 3     &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp MINUS
-                &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &tog 4         &none     &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
-                &kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G     &none          &none     &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
+                &kp TAB   &kp Q     &kp W     &kp E     &kp R     &kp T     &kp MEH        &kp MINUS &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSLH
+                &kp ESC   &kp A     &kp S     &kp D     &kp F     &kp G     &kp HYPER      &kp EQUAL &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
                 &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-                &mo 2     &kp GRAVE &kp CAPS  &kp LEFT  &kp RIGHT                                              &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &mo 2
-                                                                  &kp LCTRL &kp LALT       &kp LGUI  &kp RCTRL
-                                                        &kp BSPC  &kp DEL   &kp HOME       &kp PG_UP &kp ENTER &kp SPACE
-                                                                            &kp END        &kp PG_DN
+                &kp LCTRL &kp GRAVE &kp LALT  &kp LEFT  &kp RIGHT                                              &kp UP    &kp DOWN  &kp LBKT  &kp RBKT  &kp RCTRL
+                                                                  &kp BSPC  &mo 2          &mo 2     &kp DEL
+                                                        &kp SPACE &kp LGUI  &kp HOME       &kp PG_UP &kp ENTER &kp SPACE
+                                                                            &kp CAPS       &kp PG_DN
             >;
         };
 
@@ -47,11 +50,11 @@
 
         fn {
             bindings = <
-                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    ___            ___       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
-                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___       ___       ___       ___       ___
-                ___       ___       ___       ___       ___       ___                                ___       ___       ___       ___       ___       ___
-                ___       ___       ___       ___       ___                                                    ___       ___       ___       ___       ___
+                &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6    ___            ___       &kp F7    &kp F8       &kp F9       &kp F10    &kp F11   &kp F12
+                ___       ___       ___       ___       ___       ___       ___            ___       ___       ___          ___          ___        ___       ___
+                ___       ___       ___       ___       ___       ___       ___            &tog 4    ___       &kp C_PREV   &kp C_PP     &kp C_NEXT ___       ___
+                ___       ___       ___       ___       ___       ___                                ___       ___          ___          ___        ___       ___
+                ___       ___       ___       ___       ___                                                    &kp C_VOL_UP &kp C_VOL_DN ___        ___       ___
                                                                   ___       ___            ___       ___
                                                         ___       ___       ___            ___       ___       ___
                                                                             ___            ___
