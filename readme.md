@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> Many of the issues motivating this repo have recently been addressed by version 3.0
+> Many of the issues motivating this repo have recently been addressed by [version 3.0](https://github.com/KinesisCorporation/Adv360-Pro-ZMK)
 > of the official repo. I am therefore retiring this repo. Going forward, I recommend using the
 > official configuration from Kinesis as this repo won't be updated anymore to incorporate new ZMK
 > features.
