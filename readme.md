@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> Many of the issues motivating this repo have recently been addressed by version 3.0
+> of the official repo. I am therefore retiring this repo. Going forward, I recommend using the
+> official configuration from Kinesis as this repo won't be updated anymore to incorporate new ZMK
+> features.
+
 # Demo config for Kinesis Advantage 360 pro
 
 This is a variation of the [official ZMK
